@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1020894508591",
+    "firebase_url": "https://movie-admin-android-java.firebaseio.com",
+    "project_id": "movie-admin-android-java",
+    "storage_bucket": "movie-admin-android-java.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020894508591:android:29227ec1379f86c098f8da",
+        "android_client_info": {
+          "package_name": "com.myapp.clientappsub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020894508591-jmr8798eip6n16qsfdvc80toqr75pdmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFYBuUl0Kl64f7xyU5lhpeWDGUs9sjCwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020894508591-jmr8798eip6n16qsfdvc80toqr75pdmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

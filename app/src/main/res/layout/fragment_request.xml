@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/ads"
+                layout="@layout/large_banner"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/request"
+                android:layout_centerHorizontal="true"
+                android:elevation="24dp"
+                android:layout_margin="30dp"
+                android:layout_below="@id/ads"/>
+
+            <TextView
+                android:id="@+id/movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TitleStyle"
+                android:text="Movie Name"
+                android:layout_below="@id/image"/>
+
+            <EditText
+                android:id="@+id/et_movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sp_50"
+                android:hint="Movie Name"
+                android:background="@drawable/edtbg"
+                android:layout_below="@id/movie"
+                android:paddingLeft="@dimen/ten_dp"/>
+
+            <TextView
+                android:id="@+id/image_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TitleStyle"
+                android:text="Image Link"
+                android:layout_below="@id/et_movie_name"/>
+
+            <EditText
+                android:id="@+id/et_image_link"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sp_50"
+                android:hint="Image Link"
+                android:background="@drawable/edtbg"
+                android:layout_below="@id/image_link"
+                android:paddingLeft="@dimen/ten_dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/et_image_link">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:background="@color/success_color"
+                    android:layout_margin="@dimen/dp_20"/>
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@color/error_color"
+                    android:layout_margin="@dimen/dp_20"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true">
+
+    </FrameLayout>
+
+</RelativeLayout>

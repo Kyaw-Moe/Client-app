@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp">
+
+            <include
+                android:id="@+id/ads"
+                layout="@layout/large_banner"/>
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sp_50"
+                android:background="@drawable/edtbg"
+                android:hint="Search"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:paddingLeft="@dimen/ten_dp"
+                android:drawableRight="@drawable/ic_action_search"
+                android:drawableTint="@color/colorPrimary"
+                android:paddingRight="@dimen/ten_dp"
+                android:layout_below="@id/ads">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TitleStyle"
+                android:text="All Movies"
+                android:layout_below="@id/search"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie"/>
+
+            <TextView
+                android:id="@+id/tv_series"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TitleStyle"
+                android:text="All Series"
+                android:layout_below="@id/rcv_movie"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_series"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_series"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true">
+
+    </FrameLayout>
+
+</RelativeLayout>

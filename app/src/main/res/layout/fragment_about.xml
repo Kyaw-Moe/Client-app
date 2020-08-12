@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/ten_dp">
+
+            <include
+                android:id="@+id/ads"
+                layout="@layout/large_banner"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="@dimen/ten_dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/ten_dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_action_gmail"
+                    android:tint="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/ten_dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/aboutbg"
+                    android:elevation="@dimen/ten_dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gmail"
+                        android:textSize="@dimen/dp_20"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="fill"
+                        android:paddingLeft="@dimen/dp_20"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kyaw.moe.ng.96@gmail.com"
+                        style="@style/TitleStyle" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="@dimen/dp_20"
+                android:layout_margin="@dimen/ten_dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:src="@drawable/ic_action_phone"
+                    android:tint="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/aboutbg"
+                    android:elevation="@dimen/ten_dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="fill"
+                        android:paddingLeft="@dimen/dp_20"
+                        android:text="Phone"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dp_20" />
+
+                    <TextView
+                        style="@style/TitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09790372008" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/ten_dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:src="@drawable/ic_action_adress"
+                    android:tint="@color/colorPrimary"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@drawable/aboutbg"
+                    android:elevation="@dimen/ten_dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="fill"
+                        android:paddingLeft="@dimen/dp_20"
+                        android:text="Adress"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dp_20" >
+
+                    </TextView>
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:map="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:context=".MapsActivity"
+                        android:layout_margin="@dimen/dp_20"/>
+                </LinearLayout>
+            </LinearLayout>
+            <include
+                layout="@layout/bottom_ads"/>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
